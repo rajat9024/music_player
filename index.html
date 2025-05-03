@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4d4598988.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="music-player">
+        <div class="now-playing">
+            <img id="album-art" src="./music.jpg" alt="Album Art">
+            <div class="song-info">
+                <h2 id="song-title">Title</h2>
+                <p id="artist">Artist</p>
+                <p id="album">Album</p>
+            </div>
+        </div>
+       
+        <div class="slider_container">
+            <span class="current-time">0:00</span>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekto()">
+            <div class="totle-duration">00:00</div>
+        </div>
+        <div class="slider_container">
+            <i class="fa fa-volume-down "></i>
+            <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setvolume()">
+            <i class="fa fa-volume-up "></i>
+        </div>
+        <div class="buttons">
+            <div class="random-track" onclick="randomTrack()">
+                <i class="fas fa-random fa-2x" title="random"></i>
+            </div>
+            <div class="prev-track" onclick="prevTrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="next-track" onclick="nextTrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="repeat-track" onclick="repeatTrack()">
+                <i class="fas fa-repeat fa-2x" title="repeat"></i>
+            </div>
+        </div>
+        <div id="wave">
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+
+        </div>
+        <!-- <div class="playlist-container">
+            <h3>Playlist</h3>
+            <ul id="playlist">
+                </ul> -->
+        <!-- </div>
+        <audio id="audio" preload="metadata" >
+    </audio>
+    </div> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
